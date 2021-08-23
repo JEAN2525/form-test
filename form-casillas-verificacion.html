@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario lista verificacion y checkbox</title>
+    <style>
+
+        fieldset{
+            border: none;
+            appearance: none;
+            -webkit-appearance: none;
+            box-sizing: border-box;
+            margin:0;
+            padding: 0;
+            /* position: absolute; */
+
+        }
+
+        legend{
+            position: relative;
+            
+            font-size: 3vmax;
+            
+        }
+               
+        li{
+           list-style: none;
+        
+           
+        }
+        label{
+            font-size: 3vmax;
+        }
+
+        h2{
+            font-size: 4vmax;
+        }
+
+        .pizzas input[type="checkbox"]{
+                    
+            appearance: none;
+            -webkit-appearance: none;
+            font-size: 2.5vmax;
+            border: 5px solid black;
+                        
+        }
+
+        .pizzas input[type="checkbox"]::before{
+            color: green;
+            content: "✔";
+            visibility: hidden;
+            position: relative;
+            
+                                              
+
+        }
+        .pizzas input[type="checkbox"]:checked:before{
+            visibility: visible;
+            
+            
+        }
+
+        .pizzas input[type="checkbox"]:checked + label {
+           color: green;
+        }
+
+        /*ejemplo 2*/
+
+        .jugador input[type="radio"]{
+            appearance: none;
+            -webkit-appearance: none;
+            font-size: 2.5vmax;
+            border-radius: 50%;
+            border: 3px solid black;
+            
+            
+            
+            
+            
+
+        }
+
+        .jugador input[type="radio"]::before {
+            color: green;
+            content: "✸";
+            visibility: hidden;
+             position: relative;
+
+            
+            
+        }
+
+        .jugador input[type="radio"]:checked:before{
+            visibility: visible;
+            color: green;
+            
+
+        }
+
+        .jugador input[type="radio"]:checked + label {
+           color: green;
+        }
+        .jugador li{
+            margin-left: 40px;
+        }
+
+
+
+        /*ejemplo-3logo*/
+
+        .pizzas-logo input[type="checkbox"]{
+                    
+            appearance: none;
+            -webkit-appearance: none;
+            
+            
+                                
+         }
+
+         .pizzas-logo input[type="checkbox"]::before{
+                    content: "㊉";
+                    font-size: 2.5vmax;
+                    
+                                      
+                 }
+
+                 .pizzas-logo input[type="checkbox"]:checked::before{
+
+                    content: "❂";
+                    font-size: 3.2vmax;
+                    color: green;
+
+                 }
+
+                 .pizzas-logo input[type="checkbox"]:checked + label{
+
+                    color: green;
+
+                 }
+
+                 .pizzas-logo li{
+                     margin-left: -8px;
+                 }
+
+
+
+
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+        
+   
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset class="pizzas">
+            <legend>ingrediente de Pizzas</legend>
+            <h2>Escoje los mejores ingredientes para tu pizza:</h2>
+            <ul>
+                <li><input type="checkbox" name="ingredientes-pizza" id="Tomate">
+                    <label for="Tomate">Tomate</label>
+                </li>
+    
+                <li><input type="checkbox" name="ingredientes-pizza" id="Harina">
+                    <label for="Harina">Harina</label>
+                </li>
+                <li><input type="checkbox" name="ingredientes-pizza" id="Gelatina">
+                    <label for="Gelatina">Gelatina</label>
+                </li>
+                <li><input type="checkbox" name="ingredientes-pizza" id="Peperoni">
+                    <label for="Peperoni">Peperoni</label>
+                </li>
+                <li><input type="checkbox" name="ingredientes-pizza" id="Zanahoria">
+                    <label for="Zanahoria">Zanahoria</label>
+                </li>
+                <li><input type="checkbox" name="ingredientes-pizza" id="Cebolla">
+                    <label for="Cebolla">Cebolla</label>
+                </li>
+            </ul>
+        </fieldset>
+        
+           <hr>
+           
+        <fieldset class="jugador">
+            <legend>Jugadores Top</legend>
+            <h2>Jugador favorito</h2>
+            <li><input type="radio" name="mejor-jugador" id="Ronaldo">
+                <label for="Ronaldo">Ronaldo</label></li>
+            <li><input type="radio" name="mejor-jugador" id="Messi">
+                <label for="Messi">Messi</label></li>
+            <li><input type="radio" name="mejor-jugador" id="Embape">
+                <label for="Embape">Embape</label></li>
+            <li><input type="radio" name="mejor-jugador" id="Neymar">
+                <label for="Neymar">Neymar</label></li> 
+            <li><input type="radio" name="mejor-jugador" id="Cavani">
+                <label for="Cavani">Cavani</label></li>
+            <li><input type="radio" name="mejor-jugador" id="James">
+                <label for="James">James</label></li>
+        </fielset>
+        <br>
+        <fieldset class="pizzas-logo">
+            <legend>ingrediente de Pizzas logo</legend>
+            <h2>Escoje los mejores ingredientes para tu pizza logo:</h2>
+            <ul>
+                <li><input type="checkbox" name="ingredientes-pizza" id="Tomate">
+                    <label for="Tomate">Tomate</label>
+                </li>
+    
+                <li><input type="checkbox" name="ingredientes-pizza" id="Harina">
+                    <label for="Harina">Harina</label>
+                </li>
+                <li><input type="checkbox" name="ingredientes-pizza" id="Gelatina">
+                    <label for="Gelatina">Gelatina</label>
+                </li>
+                <li><input type="checkbox" name="ingredientes-pizza" id="Peperoni">
+                    <label for="Peperoni">Peperoni</label>
+                </li>
+                <li><input type="checkbox" name="ingredientes-pizza" id="Zanahoria">
+                    <label for="Zanahoria">Zanahoria</label>
+                </li>
+                <li><input type="checkbox" name="ingredientes-pizza" id="Cebolla">
+                    <label for="Cebolla">Cebolla</label>
+                </li>
+            </ul>
+        </fieldset>
+
+    </form>
+    
+</body>
+</html>
