@@ -1,6 +1,6 @@
 # form-test
 
-## En este repositorio encontratas todos los diseñode de prueba de cada elemento utilizado para Diseñar diferentes tipos de formularios
+## En este repositorio encontraras todos los diseñode de prueba de cada elemento utilizado para Diseñar diferentes tipos de formularios
 
 ***Te dejamos diferentes links donde podras ver en accion los codigo en tu navegador:***
 
