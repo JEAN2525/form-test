@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+        <style>
+
+         
+
+          form{
+            position: relative;
+          }
+            fieldset{
+              margin: auto;
+              box-sizing: border-box;
+              width: 20vmax;
+              position: relative;
+              font-family: 'Poppins', sans-serif;              
+              
+            }
+            legend{
+              background-color: black;
+              color: white;
+              font-size: 1.5vmax;
+              padding: 5px;
+              
+            }
+            ul{
+              margin: 0 ;
+              padding: 0;
+              position: relative;
+              
+            }
+
+            li{
+              list-style: none;
+              margin-left: 0  ;
+              position: relative;
+              margin: 0;
+              
+            
+            }
+            
+            input{
+              appearance: none;
+              width: 40vmax;
+              
+              border-radius: 5px;
+            
+            }
+            h4{
+              font-size: 1.1vmax;
+            }
+            label{
+              font-size:1.1vmax;
+            }
+            .tercer-label{
+              font-size: 1.1vmax;
+            }
+
+            input:hover{
+              background-color:#ededed;
+            }
+
+            span::after{
+              content: "required";
+              color: white;
+              background-color: black;
+              position: absolute;
+              right: 12.5px;
+              padding: 3px;
+              font-size: 1vmax;
+              font-family: monospace;
+            
+            }
+
+            input:required{
+              border-color:#a5a5a5 ;
+            }
+            button{
+              
+              width: 18vmax;
+              margin-left: 10vmax;
+            }
+
+          input + span{
+            position: relative;
+          }
+
+          input + .email-3::before{position: absolute;right: -8.5px;top:28px;}
+          input:invalid + .email-3::before{content: "✘";color: red; }
+          input:valid + .email-3::before{content: "✔";color:green; font-size: 15px;}
+          /*  */
+          input + .text-1::before{position: absolute; right: -8.5px; top:50px;}
+          input:invalid + .text-1::before{content: "✘"; color: red; }
+          input:valid + .text-1::before{content: "✔"; color:green; }
+         
+          /*  */
+          input + .text-2::before{position: absolute; right: -8.5px; top:25px;}
+          input:invalid + .text-2::before{content: "✘"; color: red; }
+          input:valid + .text-2::before{content: "✔"; color:green; }
+
+
+          @media screen and (min-width: 1000px){
+            
+          input + .text-1::before{position: absolute; right: -8.5px; top:60px;}
+          input:invalid + .text-1::before{content: "✘"; color: red; }
+          input:valid + .text-1::before{content: "✔"; color:green; }
+        }
+
+
+           
+        </style>
+
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>Feedback form</legend>
+      
+      <ul><li>
+        <h4>Required fields are labelled with "required".</h4>
+        <label for="fname">First name: </label><span></span><br>
+        <input id="fname" name="fname" type="text" required>
+        <i class="text-1"></i>
+        
+      </li>
+      <br>
+      <li>
+        <label for="lname">Last name: </label><span></span><br>
+        <input id="lname" name="lname" type="text" required>
+        <i class="text-2"></i>
+        
+      </li>
+      <br>
+      <li>
+        <label for="email" class="tercer-label">Email address (include if you want a response):</span><br>
+        <input id="email" name="email" type="email" required>
+        <i class="email-3"></i>
+       
+      </li>
+      <br>
+      <li><button>Submit</button></li></ul>
+    </fieldset>
+  </form>
+
+</body>
+</html>
