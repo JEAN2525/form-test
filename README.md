@@ -1,4 +1,4 @@
-# Form-test - Diseño de formularios
+﻿# Form-test - Diseño de formularios
 
 ## En este repositorio encontraras todos los diseñode de prueba de cada elemento utilizado para Diseñar diferentes tipos de formularios
 
@@ -7,6 +7,8 @@
 1-Diseño con input type="checkbox" y "radio" con :before y :checked [Pruebalo en accion aqui](http://kenia-claro.cu.ma/form-casillas-verificacion.html).
  
 2-Diseño utilizando pseudoelementos valid e invalid y  [Pruebalo en accion aqui](http://kenia-claro.cu.ma/pseudoelementos-form-css.html).
+
+2-Diseño utilizando pseudoelementos out-of-range y  [Pruebalo en accion aqui](https://kenia-claro.cu.ma/form-inrange-outrange-test.html).
 
 ###### Nota: Incluimos el codigo css dentro del head para reducir la cantidad de archivos ya que son codigos de solo prueba
 
