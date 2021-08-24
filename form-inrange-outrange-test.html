@@ -91,11 +91,11 @@
             position: relative;
           }
 
-          input + .email-3::before{position: absolute;right: -8.5px;top:28px;}
+          input + .email-3::before{position: absolute;right: -8.5px;top:35px;}
           input:invalid + .email-3::before{content: "✘";color: red; font-size: 15px;}
           input:valid + .email-3::before{content: "✔";color:green; font-size: 15px;}
           /*  */
-          input + .text-1::before{position: absolute; right: -8.5px; top:50px;}
+          input + .text-1::before{position: absolute; right: -8.5px; top:30px;}
           input:invalid + .text-1::before{content: "✘"; color: red; }
           input:valid + .text-1::before{content: "✔"; color:green; }
          
@@ -105,12 +105,13 @@
           input:valid + .text-2::before{content: "✔"; color:green; }
 
 
-          @media screen and (min-width: 1000px){
+          /* @media screen and (min-width: 1000px){
             
           input + .text-1::before{position: absolute; right: -8.5px; top:60px;}
           input:invalid + .text-1::before{content: "✘"; color: red; }
           input:valid + .text-1::before{content: "✔"; color:green; }
-        }
+        } */
+        
 
         /* out-range */
         
@@ -122,17 +123,19 @@
             position: absolute;
             font-size: 2vmax;
             width: 25vmax;
-            top: -3.7vmax;
+            top: -4vmax;
             right: 0.5vmax;
+            
 
         }
 
         input[type="number"]:out-of-range + i::after{
 
-            content: "Solo mayor a 13 años";
+            content: "Solo mayor a 12 años";
             color: white;
-            background-color: darkred;
+            background-color: red;
             padding: 5px;
+            padding: 7px;
             
 
         }
@@ -151,9 +154,8 @@
   <form>
     <fieldset>
       <legend>Test Diseño formulario</legend>
-      
+      <h4>Required fields are labelled with "required".</h4>
       <ul><li>
-        <h4>Required fields are labelled with "required".</h4>
         <label for="fname">First name: </label><span></span><br>
         <input id="fname" name="fname" type="text" required>
         <i class="text-1"></i>
