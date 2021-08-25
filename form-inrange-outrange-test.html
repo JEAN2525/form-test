@@ -19,8 +19,8 @@
               box-sizing: border-box;
               width: 30vw;
               position: relative;
-              font-family: 'Poppins', sans-serif;              
-              
+              font-family: 'Poppins', sans-serif;
+              box-shadow: 0px 0px 4px 0.5px black;
             }
             legend{
               background-color: black;
@@ -50,7 +50,14 @@
               width: 50vmax;
               
               border-radius: 5px;
-            
+                          
+            }
+            input:hover{
+              background-color: rgba(20, 19, 19, 0.219);
+            }
+
+            input:focus{
+              background-color: white;
             }
             h4{
               font-size: 2.1vmax;
@@ -58,95 +65,78 @@
             label{
               font-size:1.8vmax;
             }
-            .tercer-label{
-              font-size: 1.8vmax;
-            }
-
-            input:hover{
-              background-color:#ededed;
-            }
-
-            span::after{
-              content: "required";
-              color: white;
-              background-color: black;
-              position: absolute;
-              right: 12.5px;
-              padding: 3px;
-              font-size: 2vmax;
-              font-family: monospace;
-            
-            }
-
-            input:required{
-              border-color:#a5a5a5 ;
-            }
-            button{
-              
-              width: 18vmax;
-              margin-left: 15vmax;
-            }
-
-          input + span{
-            position: relative;
-          }
-
-          input + .email-3::before{position: absolute;right: -8.5px;top:35px;}
-          input:invalid + .email-3::before{content: "✘";color: red; font-size: 15px;}
-          input:valid + .email-3::before{content: "✔";color:green; font-size: 15px;}
-          /*  */
-          input + .text-1::before{position: absolute; right: -8.5px; top:30px;}
-          input:invalid + .text-1::before{content: "✘"; color: red; }
-          input:valid + .text-1::before{content: "✔"; color:green; }
-         
-          /*  */
-          input + .text-2::before{position: absolute; right: -8.5px; top:5px;}
-          input:invalid + .text-2::before{content: "✘"; color: red; }
-          input:valid + .text-2::before{content: "✔"; color:green; }
-
-
-          /* @media screen and (min-width: 1000px){
-            
-          input + .text-1::before{position: absolute; right: -8.5px; top:60px;}
-          input:invalid + .text-1::before{content: "✘"; color: red; }
-          input:valid + .text-1::before{content: "✔"; color:green; }
-        } */
-        
-
-        /* out-range */
-        
-        input[type="number"] + i{
-            position: relative;
-        }
-
-        input[type="number"] + i::after{
-            position: absolute;
-            font-size: 2vmax;
-            width: 25vmax;
-            top: -4vmax;
-            right: 0.5vmax;
             
 
-        }
-
-        input[type="number"]:out-of-range + i::after{
-
-            content: "Solo mayor a 12 años";
-            color: white;
-            background-color: red;
-            padding: 5px;
-            padding: 7px;
             
-
-        }
-        input[type="number"]:out-of-range{
-
-            border-color:red;
-            background-color: rgba(255,0,0,0.09);
-        }
-          
-
            
+            span::after{
+              position: absolute;
+              content: "Requerido"; 
+              background-color: black;
+              color: white;
+              padding: 5px;
+              right: 0;
+              bottom: 20px;
+              font-size: 1.5vmax;
+            }
+
+            
+
+
+            /* input{
+              border-color: #ccc;
+            } */
+
+            
+            input + span + i{
+              position: relative;
+            }
+
+            
+            input + i::before{
+              position: absolute;
+              right: -10px;
+              top: 30px;
+
+            }
+
+            input:invalid + i::before{
+              content: "✖";
+              font-size: 2vmax;
+              color: red;
+
+            }
+            
+            
+            input:valid + i::before{
+              content: "✔";
+              font-size: 3vmax;
+              color: green;
+
+            }   
+
+            /* out-range */         
+
+           input[type="number"] + i::after{
+              position: absolute;
+              right: 0;
+              bottom: 20px;
+                        
+             }
+             input[type="number"]:out-of-range{
+                border-color: red;
+                background-color: rgba(255,0,0,0.30 );
+             }
+
+
+            input[type="number"]:out-of-range + i::after{
+
+              content: "mayor a 12 Años";
+              color: white;
+              background-color: red;
+              padding: 5px;
+            }
+
         </style>
 
 </head>
@@ -154,26 +144,24 @@
   <form>
     <fieldset>
       <legend>Test Diseño formulario</legend>
-      <h4>Required fields are labelled with "required".</h4>
+      <h4>Los campos obligatorios tiene etiqueta de  "requerido".</h4>
       <ul><li>
-        <label for="fname">First name: </label><span></span><br>
-        <input id="fname" name="fname" type="text" required>
+        <label for="fname">Primer Nombre: </label><span class="range-1"></span><br>
+        <input id="fname" name="fname" type="text" pattern="[a-z]{3,15}" title="Solo letras maximo 15" required >
         <i class="text-1"></i>
         
       </li>
       <br>
       <li>
-        <label for="lname">Edad (MAYOR A 12)</label><span class="range"></span><br>
-        <input class="out-range" id="lname" name="lname" type="number" min="12" max="90" required>
-        <!-- <em></em> -->
+        <label for="lname">Edad (MAYOR A 12)</label><span class="range-2"></span><br>
+        <input  class="out-range" id="lname" name="lname" type="number" min="12" max="90"  required >
         <i class="text-2"></i>
-        
-        
-        
+
       </li>
+        
       <br>
       <li>
-        <label for="email" class="tercer-label">Email address (include if you want a response):</span><br>
+        <label for="email" class="tercer-label">Correo electronico </label><!-- <span></span> --><br>
         <input id="email" name="email" type="email" required>
         <i class="email-3"></i>
        
