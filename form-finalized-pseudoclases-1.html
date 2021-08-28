@@ -25,7 +25,7 @@
             legend{
               background-color: black;
               color: white;
-              font-size: 1.5vmax;
+              font-size: 2.2vmax;
               padding: 5px;
               
             }
@@ -97,7 +97,7 @@
               position: absolute; 
               content: "✘";
               color:red;
-              font-size: 22px;
+              font-size: 1em;
               bottom:-3px;
               right: 0;
 
@@ -106,7 +106,7 @@
               position: absolute; 
               content: "✔";
               color:green;
-              font-size: 22px;
+              font-size: 1em;
               bottom:-3px;
               right: 0;
               
@@ -227,6 +227,26 @@
               color: red;
             }
 
+            .div-button{
+              display: flex;
+              
+              justify-content: center;
+            }
+
+             button{
+              width: 28vmax;
+              border-radius: 8px solid black;
+              background-color: black;
+              color: white;
+              font-size: 1.8vmax;
+              font-weight: bold;
+              box-shadow: 0px 0px 2px 2px black;
+
+            }
+           button:hover{
+                background-color: rgba(0, 0, 0, 0.80);
+            }
+
 
 
 
@@ -296,21 +316,21 @@
           <h1>Tipo de Pizza</h1>
           <h4>Elije el Tipo de Pizza:</h4>
           <ul class="tipo-pizza">
-            <li><input type="checkbox" id="Hawaiana" >
+            <li><input type="checkbox" id="Hawaiana" value="tipo-pizza" name="tipo-pizza">
             <label for="Hawaiana">Hawaiana</label></li>
-            <li><input type="checkbox" id="De carne" >
+            <li><input type="checkbox" id="De carne" value="tipo-pizza" name="tipo-pizza">
               <label for="De carne">De carne</label></li>
-            <li><input type="checkbox" id="De Pollo" >
+            <li><input type="checkbox" id="De Pollo" value="tipo-pizza" name="tipo-pizza">
               <label for="De Pollo">De Pollo</label></li>
-            <li><input type="checkbox" id="Americana" >
+            <li><input type="checkbox" id="Americana" value="tipo-pizza" name="tipo-pizza">
               <label for="Americana">Americana</label></li>
-            <li><input type="checkbox" id="Colombiana" >
-              <label for="Colombiana">Colombiana</label></li>
+            <li><input type="checkbox" id="Colombiana" value="tipo-pizza" name="tipo-pizza">
+              <label for="Colombiana">Colombianas</label></li>
           </ul>
 
+              <br><br>
 
-
-      <li><button>Submit</button></li>
+      <div class="div-button"><button >Submit</button></div>
     </fieldset>
 
     
